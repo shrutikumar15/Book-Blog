@@ -1,0 +1,236 @@
+header {
+  box-sizing: border-box;
+  min-height: 20vw;
+  padding: 8vw 0 5vw;
+  position: relative;
+  -webkit-transform-style: inherit;
+  transform-style: inherit;
+  width: 100vw;
+}
+
+header,
+header:before {
+  background: 50% 50% / cover;
+}
+
+header::before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  display: block;
+  background-color: #000;
+  background-image: url("/img/artsy-back-view-silhouette-photo-of-woman-standing-in-front-2289895.jpg");
+  background-size: cover;
+  -webkit-transform-origin: center center 0;
+  -webkit-transform: translateZ(-1px) scale(2);
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  min-height: 100vh;
+}
+
+header * {
+  font-weight: normal;
+  letter-spacing: 0.3em;
+  text-align: center;
+  margin: 0;
+  padding: 1em 0;
+  -webkit-animation: fadein 3s;
+  -moz-animation: fadein 3s;
+  -ms-animation: fadein 3s;
+}
+
+header p {
+}
+
+header h1 {
+  color: white;
+  background-color: transparent;
+  padding: 30px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+ul {
+  color: white;
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
+  padding: 10px 40px 0 0;
+  list-style: none;
+  margin: 0;
+}
+#first {
+  border-top: 1px solid white;
+}
+li {
+  margin: 1vw;
+  display: block;
+  text-align: center;
+  letter-spacing: 0.3em;
+  border-bottom: 1px solid white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav ul {
+  display: block;
+  justify-content: flex-end;
+}
+
+@media screen and (min-width: 768px) {
+  a {
+    font-size: 23px;
+  }
+  header p {
+    font-size: 30px;
+  }
+  header h1 {
+    font-size: 70px;
+  }
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+  li {
+    border-right: 3px solid white;
+    border-bottom: 1px solid transparent;
+  }
+  #first {
+    border-top: 1px solid transparent;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+li a {
+  display: block;
+  padding: 20px 20px;
+
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+
+.logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+
+.menu-icon {
+  position: relative;
+  z-index: 2;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.menu-icon .navicon {
+  background: white;
+  display: block;
+  z-index: 2;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.menu-icon .navicon:before,
+.menu-icon .navicon:after {
+  background: white;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.menu-icon .navicon:before {
+  top: 5px;
+}
+
+.menu-icon .navicon:after {
+  top: -5px;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+@media (min-width: 48em) {
+  li {
+    float: left;
+  }
+  li a {
+    padding: 20px 30px;
+  }
+  .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+    background-color: hsla(0, 0%, 100%, 0);
+  }
+  .menu-icon {
+    display: none;
+  }
+}

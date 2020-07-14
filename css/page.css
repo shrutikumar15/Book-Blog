@@ -1,0 +1,70 @@
+.blog {
+  display: block;
+}
+
+.blog-post {
+  padding: 20px 10% 10% 10%;
+}
+
+.details {
+  padding: 0 10% 10% 10%;
+}
+
+h3 {
+  margin: 0;
+  text-align: center;
+}
+.iden {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #f7f7f7;
+  padding: 4%;
+  border-radius: 10px;
+  margin-top: 5%;
+}
+.iden p {
+  font-weight: normal;
+  font-size: 18px;
+}
+main {
+  background-color: white;
+}
+.social {
+  display: flex;
+  justify-content: space-evenly;
+}
+.social > .fa {
+  color: black;
+}
+.contact {
+  text-align: center;
+}
+.sub {
+  border: 1px solid black;
+  background-color: transparent;
+  padding: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  width: 100%;
+}
+.sub:hover {
+  background-color: black;
+  color: white;
+}
+@media (min-width: 800px) {
+  .blog {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "blog-post blog-post blog-post details";
+  }
+
+  .blog-post {
+    grid-area: blog-post;
+    font-size: 20px;
+  }
+
+  .details {
+    grid-area: details;
+    padding: 20px 5% 5% 5%;
+  }
+}

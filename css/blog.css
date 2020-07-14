@@ -1,0 +1,36 @@
+@import "header.css";
+@import "content.css";
+@import "page.css";
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+footer {
+  height: 100px;
+  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%) !important;
+}
+
+.msocial {
+  justify-content: space-evenly;
+  display: flex;
+  padding-top: 30px;
+}
+
+.msocial > .fa {
+  font-size: 25px;
+}
